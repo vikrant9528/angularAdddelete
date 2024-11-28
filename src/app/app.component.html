@@ -1,0 +1,52 @@
+<div class="container">
+  <h1>Student details</h1>
+  <form [formGroup]="form" class="form">
+    <div class="form-data">
+      <label>Name</label>
+      <input type="text" placeholder="Enter your name" formControlName="name">
+    </div>
+    <div class="form-data">
+      <label>Mobile Number</label>
+      <input type="number" placeholder="Enter mobile number" formControlName="number">
+    </div>
+    <div class="form-data">
+      <label>Email</label>
+      <input type="email" placeholder="Enter your email" formControlName="email">
+    </div>
+    <div class="form-data">
+      <label for="hobbies">Choose a car:</label>
+      <select name="hobbies" id="hobbies" formControlName="hobbies">
+        <option value="singing">singing</option>
+        <option value="playing">playing</option>
+        <option value="writing">writing</option>
+        <option value="listening">listening</option>
+      </select>
+    </div>
+    <div class="form-data">
+      <label for="description">Review of W3Schools:</label>
+
+      <textarea id="description" name="description" rows="4" cols="50" formControlName="description">
+
+</textarea>
+    </div>
+  </form>
+</div>
+
+<!-- <p *ngFor="let ss of datas">{{ss.firstName}}</p> -->
+<!-- <div class="table">
+  <table border="2px solid black">
+    <tr>
+      <th>Name</th>
+      <th>Student if</th>
+      <th>Address</th>
+      <th>Email</th>
+    </tr>
+    <tr *ngFor="let data of datas">
+      <td>{{data.firstName}}</td>
+      <td>{{data.studentId}}</td>
+      <td>{{data.address}}</td>
+      <td>{{data.email}}</td>
+    </tr>
+  </table>
+</div> -->
+<router-outlet></router-outlet>
